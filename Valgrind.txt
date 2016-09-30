@@ -1,0 +1,123 @@
+==80578== Memcheck, a memory error detector
+==80578== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==80578== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==80578== Command: ./assignment2
+==80578== Parent PID: 57496
+==80578== 
+--80578-- run: /usr/bin/dsymutil "./assignment2"
+==80578== Conditional jump or move depends on uninitialised value(s)
+==80578==    at 0x100036D00: std::__1::__stdoutbuf<char>::overflow(int) (in /usr/lib/libc++.1.dylib)
+==80578==    by 0x10002C91C: std::__1::basic_streambuf<char, std::__1::char_traits<char> >::xsputn(char const*, long) (in /usr/lib/libc++.1.dylib)
+==80578==    by 0x100006F25: std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char) (in ./assignment2)
+==80578==    by 0x100006D9C: std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long) (in ./assignment2)
+==80578==    by 0x100000C10: main (in ./assignment2)
+==80578== 
+==80578== Conditional jump or move depends on uninitialised value(s)
+==80578==    at 0x100013121: _platform_memchr$VARIANT$Haswell (vg_replace_strmem.c:896)
+==80578==    by 0x10028AB96: __sfvwrite (in /usr/lib/system/libsystem_c.dylib)
+==80578==    by 0x10028B0AA: fwrite (in /usr/lib/system/libsystem_c.dylib)
+==80578==    by 0x100036D29: std::__1::__stdoutbuf<char>::overflow(int) (in /usr/lib/libc++.1.dylib)
+==80578==    by 0x10002C91C: std::__1::basic_streambuf<char, std::__1::char_traits<char> >::xsputn(char const*, long) (in /usr/lib/libc++.1.dylib)
+==80578==    by 0x100006F25: std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char) (in ./assignment2)
+==80578==    by 0x100006D9C: std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long) (in ./assignment2)
+==80578==    by 0x100000C10: main (in ./assignment2)
+==80578== 
+==80578== Conditional jump or move depends on uninitialised value(s)
+==80578==    at 0x10002C920: std::__1::basic_streambuf<char, std::__1::char_traits<char> >::xsputn(char const*, long) (in /usr/lib/libc++.1.dylib)
+==80578==    by 0x100006F25: std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char) (in ./assignment2)
+==80578==    by 0x100006D9C: std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long) (in ./assignment2)
+==80578==    by 0x100000C10: main (in ./assignment2)
+==80578== 
+==80578== Syscall param write(buf) points to uninitialised byte(s)
+==80578==    at 0x10039597A: write$NOCANCEL (in /usr/lib/system/libsystem_kernel.dylib)
+==80578==    by 0x10028F9EC: _swrite (in /usr/lib/system/libsystem_c.dylib)
+==80578==    by 0x1002884A6: __sflush (in /usr/lib/system/libsystem_c.dylib)
+==80578==    by 0x10028AC50: __sfvwrite (in /usr/lib/system/libsystem_c.dylib)
+==80578==    by 0x10028B0AA: fwrite (in /usr/lib/system/libsystem_c.dylib)
+==80578==    by 0x100036D29: std::__1::__stdoutbuf<char>::overflow(int) (in /usr/lib/libc++.1.dylib)
+==80578==    by 0x10003387F: std::__1::basic_ostream<char, std::__1::char_traits<char> >::put(char) (in /usr/lib/libc++.1.dylib)
+==80578==    by 0x100000C5A: main (in ./assignment2)
+==80578==  Address 0x10080c849 is 9 bytes inside a block of size 4,096 alloc'd
+==80578==    at 0x10001146B: malloc (vg_replace_malloc.c:303)
+==80578==    by 0x10028B836: __smakebuf (in /usr/lib/system/libsystem_c.dylib)
+==80578==    by 0x1002A0387: __swsetup (in /usr/lib/system/libsystem_c.dylib)
+==80578==    by 0x10028AAD0: __sfvwrite (in /usr/lib/system/libsystem_c.dylib)
+==80578==    by 0x10028B0AA: fwrite (in /usr/lib/system/libsystem_c.dylib)
+==80578==    by 0x100036D29: std::__1::__stdoutbuf<char>::overflow(int) (in /usr/lib/libc++.1.dylib)
+==80578==    by 0x10002C91C: std::__1::basic_streambuf<char, std::__1::char_traits<char> >::xsputn(char const*, long) (in /usr/lib/libc++.1.dylib)
+==80578==    by 0x100006F25: std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char) (in ./assignment2)
+==80578==    by 0x100006D9C: std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long) (in ./assignment2)
+==80578==    by 0x100000B2D: main (in ./assignment2)
+==80578== 
+==80578== Conditional jump or move depends on uninitialised value(s)
+==80578==    at 0x10002C920: std::__1::basic_streambuf<char, std::__1::char_traits<char> >::xsputn(char const*, long) (in /usr/lib/libc++.1.dylib)
+==80578==    by 0x100006F25: std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char) (in ./assignment2)
+==80578==    by 0x100006D9C: std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long) (in ./assignment2)
+==80578==    by 0x100000EBD: main (in ./assignment2)
+==80578== 
+==80578== Conditional jump or move depends on uninitialised value(s)
+==80578==    at 0x100000F48: main (in ./assignment2)
+==80578== 
+==80578== Conditional jump or move depends on uninitialised value(s)
+==80578==    at 0x100006236: Array<char>::find(char, unsigned long) const (in ./assignment2)
+==80578==    by 0x100000FF2: main (in ./assignment2)
+==80578== 
+==80578== Conditional jump or move depends on uninitialised value(s)
+==80578==    at 0x1002929F1: __vfprintf (in /usr/lib/system/libsystem_c.dylib)
+==80578==    by 0x1002BA9AE: __v2printf (in /usr/lib/system/libsystem_c.dylib)
+==80578==    by 0x10029F3A5: vsprintf_l (in /usr/lib/system/libsystem_c.dylib)
+==80578==    by 0x10028F76B: sprintf_l (in /usr/lib/system/libsystem_c.dylib)
+==80578==    by 0x10004C8E3: std::__1::num_put<char, std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >::do_put(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, std::__1::ios_base&, char, long) const (in /usr/lib/libc++.1.dylib)
+==80578==    by 0x1000327A4: std::__1::basic_ostream<char, std::__1::char_traits<char> >::operator<<(int) (in /usr/lib/libc++.1.dylib)
+==80578==    by 0x1000011BE: main (in ./assignment2)
+==80578== 
+==80578== Conditional jump or move depends on uninitialised value(s)
+==80578==    at 0x100292B1B: __vfprintf (in /usr/lib/system/libsystem_c.dylib)
+==80578==    by 0x1002BA9AE: __v2printf (in /usr/lib/system/libsystem_c.dylib)
+==80578==    by 0x10029F3A5: vsprintf_l (in /usr/lib/system/libsystem_c.dylib)
+==80578==    by 0x10028F76B: sprintf_l (in /usr/lib/system/libsystem_c.dylib)
+==80578==    by 0x10004C8E3: std::__1::num_put<char, std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >::do_put(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, std::__1::ios_base&, char, long) const (in /usr/lib/libc++.1.dylib)
+==80578==    by 0x1000327A4: std::__1::basic_ostream<char, std::__1::char_traits<char> >::operator<<(int) (in /usr/lib/libc++.1.dylib)
+==80578==    by 0x1000011BE: main (in ./assignment2)
+==80578== 
+==80578== Conditional jump or move depends on uninitialised value(s)
+==80578==    at 0x100295555: __ultoa (in /usr/lib/system/libsystem_c.dylib)
+==80578==    by 0x100292B5E: __vfprintf (in /usr/lib/system/libsystem_c.dylib)
+==80578==    by 0x1002BA9AE: __v2printf (in /usr/lib/system/libsystem_c.dylib)
+==80578==    by 0x10029F3A5: vsprintf_l (in /usr/lib/system/libsystem_c.dylib)
+==80578==    by 0x10028F76B: sprintf_l (in /usr/lib/system/libsystem_c.dylib)
+==80578==    by 0x10004C8E3: std::__1::num_put<char, std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >::do_put(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, std::__1::ios_base&, char, long) const (in /usr/lib/libc++.1.dylib)
+==80578==    by 0x1000327A4: std::__1::basic_ostream<char, std::__1::char_traits<char> >::operator<<(int) (in /usr/lib/libc++.1.dylib)
+==80578==    by 0x1000011BE: main (in ./assignment2)
+==80578== 
+==80578== Conditional jump or move depends on uninitialised value(s)
+==80578==    at 0x100036D00: std::__1::__stdoutbuf<char>::overflow(int) (in /usr/lib/libc++.1.dylib)
+==80578==    by 0x10002C91C: std::__1::basic_streambuf<char, std::__1::char_traits<char> >::xsputn(char const*, long) (in /usr/lib/libc++.1.dylib)
+==80578==    by 0x10004CDB0: std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char) (in /usr/lib/libc++.1.dylib)
+==80578==    by 0x10004C9A7: std::__1::num_put<char, std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >::do_put(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, std::__1::ios_base&, char, long) const (in /usr/lib/libc++.1.dylib)
+==80578==    by 0x1000327A4: std::__1::basic_ostream<char, std::__1::char_traits<char> >::operator<<(int) (in /usr/lib/libc++.1.dylib)
+==80578==    by 0x1000011BE: main (in ./assignment2)
+==80578== 
+==80578== Conditional jump or move depends on uninitialised value(s)
+==80578==    at 0x10002C920: std::__1::basic_streambuf<char, std::__1::char_traits<char> >::xsputn(char const*, long) (in /usr/lib/libc++.1.dylib)
+==80578==    by 0x10004CDB0: std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char) (in /usr/lib/libc++.1.dylib)
+==80578==    by 0x10004C9A7: std::__1::num_put<char, std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >::do_put(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, std::__1::ios_base&, char, long) const (in /usr/lib/libc++.1.dylib)
+==80578==    by 0x1000327A4: std::__1::basic_ostream<char, std::__1::char_traits<char> >::operator<<(int) (in /usr/lib/libc++.1.dylib)
+==80578==    by 0x1000011BE: main (in ./assignment2)
+==80578== 
+==80578== 
+==80578== HEAP SUMMARY:
+==80578==     in use at exit: 39,231 bytes in 430 blocks
+==80578==   total heap usage: 542 allocs, 112 frees, 46,591 bytes allocated
+==80578== 
+==80578== LEAK SUMMARY:
+==80578==    definitely lost: 0 bytes in 0 blocks
+==80578==    indirectly lost: 0 bytes in 0 blocks
+==80578==      possibly lost: 0 bytes in 0 blocks
+==80578==    still reachable: 4,384 bytes in 3 blocks
+==80578==         suppressed: 34,847 bytes in 427 blocks
+==80578== Rerun with --leak-check=full to see details of leaked memory
+==80578== 
+==80578== For counts of detected and suppressed errors, rerun with: -v
+==80578== Use --track-origins=yes to see where uninitialised values come from
+==80578== ERROR SUMMARY: 280 errors from 12 contexts (suppressed: 0 from 0)
